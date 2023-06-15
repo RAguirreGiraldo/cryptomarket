@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/cryptomarket/static/js/main.d893c1b6.js",
+    "index.html": "/cryptomarket/index.html",
+    "main.d893c1b6.js.map": "/cryptomarket/static/js/main.d893c1b6.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d893c1b6.js"
+  ]
+}
