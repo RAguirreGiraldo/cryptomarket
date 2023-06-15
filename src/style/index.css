@@ -1,0 +1,62 @@
+@import url('./reset.css');
+
+:root {
+  --app-dark-bg:#1a1d28;
+  --font: rgb(255 255 255 /1);
+  --section-bg:#262930;
+  --border-color: #2a2c34;
+  --border-radius: 6px;
+  --app-red:#ff3c57;
+  --app-green:#33ab4e;
+  --app-purple:#833cff;
+  --app-orange:#ff833c;
+  --app-orange-hover:#fe7a2d;
+  --app-blue:#3c57ff;
+  --app-blue-hover:#364ee6;
+  --app-light-white: #ffffff;
+  --app-gray: #c0bbbac3;
+}
+
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50 vh;
+  z-index: -1;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent 85%);
+}
+
+header {
+  background-color: var(--app-dark-bg);
+  color: var(--app-light-white);
+  width: 100%;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  color: var(--app-light-white);
+}
+
+h2{
+  color: var(--app-light-white);
+}
+
+.footer {
+  background-color: var(--app-dark-bg);
+  color: var(--app-light-white);
+  height: 8%;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+}
