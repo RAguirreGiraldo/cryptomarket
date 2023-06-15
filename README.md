@@ -1,8 +1,7 @@
-## Stateful Star Rating Component
+## Crypto Market Insights
 
-The StarRating function is a stateful React component that allows users to provide 
-ratings using a star-based interface. The component utilizes both state and props 
-to manage the rating functionality..
+Welcome to Cryto Market Insights, your go-ro resource for all things related to the 
+cryptocurrency market..
 
 Click [here](https://raguirregiraldo.github.io/cryptomarket/) to view the page
 
