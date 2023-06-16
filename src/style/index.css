@@ -1,4 +1,4 @@
-@charset "utf-8";
+@import "reset.css";;
 
 :root {
   --app-dark-bg:#1a1d28;
@@ -15,6 +15,9 @@
   --app-blue-hover:#364ee6;
   --app-light-white: #ffffff;
   --app-gray: #c0bbbac3;
+  --app-header-height: 65px;
+  --app-padding-width: 15%;
+  --app-input-height: 50px;
 }
 
 body {
@@ -34,79 +37,72 @@ body:before {
   background: linear-gradient(rgba(255, 255, 255, 0.2), transparent 85%);
 }
 
-.container {
-  width: min(100% - 30px, 1080px);
-  margin-inline: auto;
-}
-
-.main-container{
-  margin: 0px auto;
-  padding: 25px;
-  border-radius: 5px;
-}
-
 header {
-  width: 100%;
-  color: var(--app-light-white);
+  height: var(--app-header-height);
+  background-color: var(--section-bg);
+}
+
+.header-container {
   display: flex;
-  align-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  margin-top: 1rem;
+  justify-content: space-between;
+  padding-left: var(--app-padding-width);
+  padding-right: var(--app-padding-width);
 }
 
-header h1 {
-  line-height: 60px;
-  font-weight: 750;
-  letter-spacing: 0.9px;
+.header-title {
+  width: 20%;
 }
 
-nav ul {
+.header-nav-link {
+  width:50%;
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: right;
 }
 
-nav li {
-  margin-right: 1rem;
-}
-
-nav a {
-  color: var(--app-light-bg);
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-li{
-  font-size: 18px;
-  font-weight: 450;
+.header-title h2 {
+  line-height: var(--app-header-height);
+  color: var(--app-green);
+  font-weight: 600;
   letter-spacing: 0.8px;
 }
 
-main {
-  padding-bottom: 60px;
-  height: min-content(100vh, auto);
-  scroll-behavior: auto;
+.menu-nav ul {
+  list-style: none;
+}
+
+.menu-nav ul li {
+  height: 56px;
+  line-height: 56px;
+  display: inline;
+}
+
+nav ul li + li {
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+.menu-nav ul li a {
+  color: var(--app-light-white);
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: color 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: var(--app-green);
 }
 
 input {
-    height: 40px;
     border-radius:5px;
     font-weight: 450;
 }
 
 input[type='submit'], button, .button {
-  padding: 10px 35px;
+  padding: 8px 15px;
   background-color: var(--app-green);
   text-transform: uppercase;
   color: var(--app-light-white);
-  font-weight: 400;
+  font-weight: 250;
   cursor: pointer;
   border-radius: 5px;
   text-decoration: none;
@@ -123,18 +119,20 @@ input[type='submit']:hover , button:hover, .button:hover {
 }
 
 .buttons {
-  padding: 20px 0px;
+  padding: 10px 0px;
   display: flex;
+  margin-right:30px;
   justify-content: flex-end;
 }
 
 .btn-add {
-  margin-left: 0px;
+  margin-left: 5px;
 }
 
 .btn-sort {
-  height: 85px;
-  width: 130px;
+  padding-inline: 0px;
+  height: 45px;
+  width: 142px;
 }
 
 .grid {
