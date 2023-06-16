@@ -51,13 +51,19 @@ function Catalog() {
                 <div className="buttons">
                     <button name="buttonToggle" className="btn-sort toggle-button" onClick={toogleButton} >{sortButtonText}</button>
                 </div> 
-                <div className="curreny-list grid">
+                <div className="currency-list grid">
                     { currencyList.map(currency =>
-                        <Link key={currency.id} className="curency-container" to={`/cryptomarket/detail/${currency.id}`}>
+                        <Link key={currency.id} className="curency-container grid-item" to={`/cryptomarket/detail/${currency.id}`}>
                             <div>                            
-                                <img src={currency.image}></img>
-                                <span>{currency.name}</span>
-                                <span>Current Price: {currency.current_price}</span>
+                                <div curreny-container>
+                                    <img src={currency.image}></img>
+                                </div>
+                                <div className="currency-name">
+                                    <span>{currency.name}</span>
+                                </div>
+                                <div className="currency-price">
+                                    <span> Current Price: {currency.current_price}</span>
+                                </div>                          
                             </div>
                         </Link>
                     )}

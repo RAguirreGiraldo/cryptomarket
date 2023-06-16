@@ -1,4 +1,4 @@
-@import "reset.css";;
+@import "reset.css";
 
 :root {
   --app-dark-bg:#1a1d28;
@@ -138,7 +138,36 @@ input[type='submit']:hover , button:hover, .button:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 3fr);
-  gap: 35px;
+  gap: 15px;
+  align-items: baseline
+}
+
+.grid-item {
+  height: 260px;
+  width: 190px;
+  background-color: var(--section-bg);
+  padding: 5px;
+  border-radius: var(--border-radius);
+  color: var(--font);
+}
+
+.currency-container img {
+  display: block;
+  width: 20%;
+  height: auto;
+  margin-bottom: 10px;
+} 
+
+.currency-name {
+  color: var(--font);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.currency-price {
+  color: var(--font);
+  text-align: center;
 }
 
 .footer {
