@@ -10,7 +10,7 @@
   --app-green:#33ab4e;
   --app-purple:#833cff;
   --app-orange:#ff833c;
-  --app-orange-hover:#fe7a2d;
+  --app-yellow:#ffd900;
   --app-blue:#3c57ff;
   --app-blue-hover:#364ee6;
   --app-light-white: #ffffff;
@@ -133,6 +133,9 @@ input[type='submit']:hover , button:hover, .button:hover {
   padding-inline: 0px;
   height: 45px;
   width: 142px;
+  font-weight: 250;
+  background-color: var(--app-yellow);
+  color:var(--app-dark-bg);
 }
 
 .grid {
@@ -215,9 +218,12 @@ input[type='submit']:hover , button:hover, .button:hover {
 }
 
 .btn-back {
-  display: flex;
   justify-content: center;
   margin-top: 20px;
+  width: fit-content;
+  text-transform: uppercase;
+  position: fixed;
+  margin-left: auto;
 }
 
 .currency-image{

@@ -32,7 +32,7 @@ function Detail() {
   return (
     <div>
        { !isLoading && 
-        <div className="currency-data">
+        <div className="container">
           <div className="currency-image">
             <img src={currency.image}></img>
           </div>  
@@ -53,8 +53,8 @@ function Detail() {
         </div>
       }
       { isLoading && <h2>Loading User data...</h2>}
-      <div className='button btn-back'>
-        <Link to="/cryptomarket">
+      <div className="container">
+        <Link className='button btn-back' to="/cryptomarket">
            Return to Catalog
         </Link>
       </div>
