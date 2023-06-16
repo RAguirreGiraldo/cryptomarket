@@ -5,8 +5,8 @@ function Header() {
   return (
     <header>
         <header>
-            <div class="header-container">
-                <div class="header-title">
+            <div className="header-container">
+                <div className="header-title">
                     <h2>CryptoMarket</h2>
                 </div>
                 <Navigation/>

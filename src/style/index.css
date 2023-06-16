@@ -15,9 +15,15 @@
   --app-blue-hover:#364ee6;
   --app-light-white: #ffffff;
   --app-gray: #c0bbbac3;
+  --app-light-gray:#aca0a031;
   --app-header-height: 65px;
   --app-padding-width: 15%;
   --app-input-height: 50px;
+}
+
+.container {
+  width: min(100% - 15px, 1080px);
+  margin-inline: auto;
 }
 
 body {
@@ -231,4 +237,52 @@ input[type='submit']:hover , button:hover, .button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/***Deatils ****/
+
+.form-inputs {
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--app-light-white);
+  color: var(--app-dark-bg);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form-inputs form {
+  margin-top: 10px;
+}
+
+.form-inputs form div {
+  display: grid;
+}
+
+.form-inputs form div input[type='text'] {
+  height: 30px;
+  width: 200px;
+  justify-content: center;
+  background-color: var(--app-light-gray);
+  border: 1px solid var(--app-gray);
+  padding: 0px 10px;
+}
+
+.form-inputs form div input[type='submit'] {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.form-inputs form div input[type='submit']:not(:disabled) {
+  opacity: 0.7;
+  cursor: not-allowed;
+} 
+
+.error-msm {
+  line-height: 18px;
+  height: 18px;
+  font-size: 13px;
+  color: var(--app-red);
+  margin-bottom: 5px;
 }

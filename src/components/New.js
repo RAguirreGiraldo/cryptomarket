@@ -1,38 +1,51 @@
-import React from 'react'
+import { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 function New() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  const [currencyName, setCurrencyName] = useState("");
+  const [marketCap, setMarkeCap] = useState("");
+
+  const handleCurrencyNameChange = (e) => setCurrencyName(e.target.value);
+  const handleMarketCapChange = (e) => setMarkeCap(e.target.value);
+  
+  const onSubmit = data => { console.log(data); }
 
   return (
     <>
-      <div>New Currency</div>
-      /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
-        <label for="currency">Currency Name</label>
-        <input name="currency" {...register("currency", { required : true})} />
-
-        <label for="market_cap">Market Cap</label>
-        <input name="market_cap" {...register("market_cap", { required : true})} />
-
-        <label for="price">Price</label>
-        <input name="price" {...register("price", { required : true})} />
-
-        {/* errors will return when field validation fails  */}
-        {errors.currencyRequired && <span>Currency name is required</span>}
-        {errors.market_capRequired && <span>Market Cap is required</span>}
-        {errors.priceRequired && <span>Price is required</span>}
-        
-        <input type="submit" value="Save" />
-      </form>
-    </>
-    
-    
-  )
+      <section>
+        <div className="form-inputs">
+          <h2> New Currency </h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div>
+                <label> Currency Name </label>
+                <input 
+                  type="text" id="currencyName" value={currencyName} 
+                  onChange={handleCurrencyNameChange}{...register('Currency Name', {required: 'Currency name is required', 
+                  maxLength: { value: 15, message: 'Please introduce less than 15 characters' } })}   
+                />                    
+                <div className="error-msm">
+                  {errors['Currency Name'] && <p>{errors['Currency Name'].message}</p>}
+                </div>
+            </div>
+            <div>
+                <label htmlFor= "marketCap"> Market Cap </label>
+                <input
+                  type="text" id="marketCap" value={marketCap}
+                  onChange={handleMarketCapChange}{...register('Market Cap', { required: 'Market Cap is required',
+                  pattern: { value: /^[0-9]+$/, message: 'Please introduce a valid number' } })}
+                />           
+                <div className="error-msm">
+                  {errors['Market Cap'] && <p>{errors['Market Cap'].message}</p>}
+                </div>
+            </div>
+            <input type="submit" value="Save" />
+          </form>
+        </div>
+      </section>
+    </>   
+  );
 }
 
-export default New
+export default New;
