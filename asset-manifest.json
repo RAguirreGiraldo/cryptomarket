@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cryptomarket/static/css/main.1876f8f3.css",
-    "main.js": "/cryptomarket/static/js/main.e2ac5bb7.js",
+    "main.css": "/cryptomarket/static/css/main.c3548597.css",
+    "main.js": "/cryptomarket/static/js/main.b1ca82b0.js",
     "index.html": "/cryptomarket/index.html",
-    "main.1876f8f3.css.map": "/cryptomarket/static/css/main.1876f8f3.css.map",
-    "main.e2ac5bb7.js.map": "/cryptomarket/static/js/main.e2ac5bb7.js.map"
+    "main.c3548597.css.map": "/cryptomarket/static/css/main.c3548597.css.map",
+    "main.b1ca82b0.js.map": "/cryptomarket/static/js/main.b1ca82b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1876f8f3.css",
-    "static/js/main.e2ac5bb7.js"
+    "static/css/main.c3548597.css",
+    "static/js/main.b1ca82b0.js"
   ]
 }
