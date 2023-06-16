@@ -50,9 +50,6 @@ function Catalog() {
             <div className="container">
                 <div className="buttons">
                     <button name="buttonToggle" className="btn-sort toggle-button" onClick={toogleButton} >{sortButtonText}</button>
-                    <Link className='button btn-add' to="/cryptomarket/currency/new">
-                        New Currency
-                    </Link>
                 </div> 
                 <div className="curreny-list grid">
                     { currencyList.map(currency =>
@@ -64,7 +61,6 @@ function Catalog() {
                             </div>
                         </Link>
                     )}
-
                 </div>
             </div>
         </div>

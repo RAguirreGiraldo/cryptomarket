@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import React from 'react';
+
 
 function Navigation() {
   return (
@@ -19,6 +20,11 @@ function Navigation() {
           <NavLink to = "/about">
             About Us
           </NavLink>
+        </li>
+        <li>
+          <Link className='button btn-add' to="/cryptomarket/currency/new">
+            New Currency
+          </Link>
         </li>
       </ul>
       </nav>

@@ -8,7 +8,6 @@ function Header() {
         </div>
         <Navigation />
     </header>
-   
   );
 }
 
