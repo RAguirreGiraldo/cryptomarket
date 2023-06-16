@@ -1,20 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function Header() {
   return (
     <header>
-        <div className="container header">
-              <div className="titleheader">
-                <h1>CryptoMarket</h1>
-              </div>
-              <nav>
-
-              </nav>
+        <div className="container">
+          <h1>CryptoMarket</h1>
         </div>
-        
-        
+        <Navigation />
     </header>
+   
   );
 }
 
 export default Header;
+

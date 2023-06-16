@@ -34,18 +34,72 @@ body:before {
   background: linear-gradient(rgba(255, 255, 255, 0.2), transparent 85%);
 }
 
-header {
-  background-color: var(--app-dark-bg);
-  color: var(--app-light-white);
-  width: 100%;
-  position: absolute;
-  height: 10%;
-  width: 100%;
-  color: var(--app-light-white);
+.container {
+  width: min(100% - 30px, 1080px);
 }
 
-h2{
+.main-container{
+  margin: 0px auto;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+header {
+  width: 100%;
   color: var(--app-light-white);
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 1rem;
+}
+
+header h1 {
+  line-height: 60px;
+  font-weight: 750;
+  letter-spacing: 0.9px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: var(--app-light-bg);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+li{
+  font-size: 18px;
+  font-weight: 450;
+  letter-spacing: 0.8px;
+}
+
+section.banner {
+  margin-top: 60px;
+  background-image: url(../media/cryptocurrency.jpg);
+  background-position: 50%;
+  background-size: cover;
+  height: 50vh;
+}
+
+main {
+  padding-bottom: 60px;
+  height: min-content(100vh, auto);
+  scroll-behavior: auto;
 }
 
 .footer {
