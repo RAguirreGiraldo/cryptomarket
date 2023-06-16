@@ -6,7 +6,7 @@
   --section-bg:#262930;
   --border-color: #2a2c34;
   --border-radius: 6px;
-  --app-red:#ff3c57;
+  --app-red:#f80424;
   --app-green:#33ab4e;
   --app-purple:#833cff;
   --app-orange:#ff833c;
@@ -180,4 +180,49 @@ input[type='submit']:hover , button:hover, .button:hover {
   left: 0;
   bottom: 0;
   width: 100%; 
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.not-found h1 {
+  font-family: 'Impact', sans-serif;
+  font-size: 72px;
+  color: var(--app-red);
+  border: 4px solid var(--app-gray);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.not-found p {
+  font-family: 'Arial', sans-serif;
+  font-size: 34px;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--app-orange);
+}
+
+.currency-stats{
+  color: var(--font);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-back {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.currency-image{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -41,24 +41,23 @@ function Detail() {
             </div>
             <div className='currency-stats'>
               <div>
-                <span>$ {currency.market_cap}</span>
-                <h3>Market Cap</h3>
+                <h3>Symbol: <span>{currency.symbol}</span> </h3>
               </div>
               <div>
-                <span>$ {currency.current_price}</span>
-                <h3>Current Price</h3>
+                <h3>Current Price: <span>$ {currency.current_price}</span> </h3>
               </div>
               <div>
-                <span>{currency.symbol}</span>
-                <h3>Symbol</h3>
-              </div>
+                <h3>Market Cap: <span>$ {currency.market_cap}</span> </h3>
+              </div>              
             </div>                   
         </div>
       }
       { isLoading && <h2>Loading User data...</h2>}
-      <Link className='button btn-back' to="/cryptomarket">
-         Return to Catalog
-      </Link>
+      <div className='button btn-back'>
+        <Link to="/cryptomarket">
+           Return to Catalog
+        </Link>
+      </div>
     </div>
   )
 }

@@ -8,12 +8,12 @@ function Navigation() {
           <nav class="menu-nav">
               <ul>
                   <li>
-                    <NavLink to ="/">
+                    <NavLink to="/cryptomarket">
                         Home
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to = "/cryptoinfo">
+                    <NavLink to = "https://www.coingecko.com/">
                         Cryptoinfo
                     </NavLink>                  
                   </li>
