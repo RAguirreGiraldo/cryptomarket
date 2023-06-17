@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
 
 function New() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -14,6 +15,9 @@ function New() {
 
   return (
     <>
+      <Helmet>
+            <title>CryptoMarket - New Currency</title>
+      </Helmet>
       <section>
         <div className="form-inputs">
           <h2> New Currency </h2>
@@ -22,7 +26,7 @@ function New() {
                 <label> Currency Name </label>
                 <input 
                   type="text" id="currencyName" value={currencyName} 
-                  onChange={handleCurrencyNameChange}{...register('Currency Name', {required: 'Currency name is required', 
+                  onInput={handleCurrencyNameChange}{...register('Currency Name', {required: 'Currency name is required', 
                   maxLength: { value: 15, message: 'Please introduce less than 15 characters' } })}   
                 />                    
                 <div className="error-msm">
@@ -33,7 +37,7 @@ function New() {
                 <label htmlFor= "marketCap"> Market Cap </label>
                 <input
                   type="text" id="marketCap" value={marketCap}
-                  onChange={handleMarketCapChange}{...register('Market Cap', { required: 'Market Cap is required',
+                  onInput={handleMarketCapChange}{...register('Market Cap', { required: 'Market Cap is required',
                   pattern: { value: /^[0-9]+$/, message: 'Please introduce a valid number' } })}
                 />           
                 <div className="error-msm">

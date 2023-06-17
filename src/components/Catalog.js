@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 function Catalog() {
 
@@ -46,6 +47,9 @@ function Catalog() {
 
   return (
     <>
+        <Helmet>
+            <title>CryptoMarket - Currency Catalog</title>
+        </Helmet>
         <div className= "Allcurrency">
             <div className="container">
                 <div className="buttons">

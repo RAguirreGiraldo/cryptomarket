@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 function Detail() {
 
@@ -31,6 +32,10 @@ function Detail() {
 
   return (
     <div>
+      <Helmet>
+            <title>CryptoMarket - {currencyId} Detail</title>
+      </Helmet>
+
        { !isLoading && 
         <div className="container">
           <div className="currency-image">
