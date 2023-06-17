@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cryptomarket/static/css/main.a4cc232a.css",
-    "main.js": "/cryptomarket/static/js/main.c2cccf53.js",
+    "main.js": "/cryptomarket/static/js/main.654d2a77.js",
     "index.html": "/cryptomarket/index.html",
     "main.a4cc232a.css.map": "/cryptomarket/static/css/main.a4cc232a.css.map",
-    "main.c2cccf53.js.map": "/cryptomarket/static/js/main.c2cccf53.js.map"
+    "main.654d2a77.js.map": "/cryptomarket/static/js/main.654d2a77.js.map"
   },
   "entrypoints": [
     "static/css/main.a4cc232a.css",
-    "static/js/main.c2cccf53.js"
+    "static/js/main.654d2a77.js"
   ]
 }
